@@ -38,3 +38,5 @@ fp-info-cache
 
 # Local project settings
 *.kicad_prl
+
+usb_typec_serial_insulation_adum121n/gerber/usb_typec_serial_insulation.zip
