@@ -3,15 +3,15 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "9.0.6-9.0.6~ubuntu22.04.1"
+      "Version": "9.0.5"
     },
-    "CreationDate": "2026-02-11T21:38:48+09:00"
+    "CreationDate": "2026-02-12T15:16:05+09:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "usb_typec_serial_insulation",
       "GUID": "7573625f-7479-4706-9563-5f7365726961",
-      "Revision": "V1.0"
+      "Revision": "V1.1"
     },
     "Size": {
       "X": 20.05,
