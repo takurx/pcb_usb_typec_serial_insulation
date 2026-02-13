@@ -1204,6 +1204,17 @@
 		)
 		(uuid "9115117b-fc46-4d74-943d-2abf92cdea0d")
 	)
+	(text "Arduino\n1 NC\n2 TX\n3 RX\n4 VCC\n5 NC\n6 GND"
+		(exclude_from_sim no)
+		(at 221.234 102.362 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bbe544e2-48bb-4c19-9902-d38dc1fc8b7d")
+	)
 	(junction
 		(at 118.11 78.74)
 		(diameter 0)
