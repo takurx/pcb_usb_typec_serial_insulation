@@ -6,10 +6,11 @@
 	(paper "A4")
 	(title_block
 		(title "usb_typec_serial_insulation")
-		(date "2026-02-12")
-		(rev "V2.0")
+		(date "2026-03-26")
+		(rev "V3.0")
 		(company "takurx")
 		(comment 1 "ADuM1412")
+		(comment 2 "modify pinout 1,2,3,5")
 	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x06_Socket"
@@ -2427,7 +2428,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "1 RTS ->\n2 RXD <-\n3 TXD ->\n4 VCC\n5 CTS <-\n6 GND"
+	(text "1 VIB, RTS <-\n2 VOC, RXD ->\n3 VIA, TXD <-\n4 VCC\n5 VOD, CTS ->\n6 GND"
 		(exclude_from_sim no)
 		(at 192.024 92.71 0)
 		(effects
@@ -2440,7 +2441,7 @@
 	)
 	(text "ArduinoのUART出力などが接続されることを想定する\n"
 		(exclude_from_sim no)
-		(at 215.392 71.374 90)
+		(at 35.306 72.39 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2449,9 +2450,9 @@
 		)
 		(uuid "37ddce12-b512-425b-88f7-696cf93469f6")
 	)
-	(text "Arduino\n1 CTS ->\n2 TX <-\n3 RX ->\n4 VCC\n5 RTS <-\n6 GND"
+	(text "Arduino\n1 RTS ->\n2 RXD <-\n3 TXD ->\n4 VCC\n5 CTS <-\n6 GND"
 		(exclude_from_sim no)
-		(at 219.202 91.948 0)
+		(at 39.116 92.964 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2460,9 +2461,20 @@
 		)
 		(uuid "498f4413-341d-4532-bf42-34c9e92e5286")
 	)
+	(text "J1, J2のピン配置は、\nポカヨケで秋月電子のCH340Eモジュールがどちら側でも付けれるように合わせる\nArduinoの場合はArduino側を合わせる"
+		(exclude_from_sim no)
+		(at 113.284 130.302 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6b93c9d4-41a4-4094-afe0-d61033308bc2")
+	)
 	(text "秋月電子のCH340E USBシリアル変換モジュールを接続することを想定する\nCH340E USBシリアル変換モジュール Type-C: 半導体 秋月電子通商-電子部品・ネット通販\nhttps://akizukidenshi.com/catalog/g/g114745/"
 		(exclude_from_sim no)
-		(at 70.612 63.5 90)
+		(at 60.706 63.5 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2473,7 +2485,7 @@
 	)
 	(text "1 RTS ->\n2 RXD <-\n3 TXD ->\n4 VCC\n5 CTS <-\n6 GND"
 		(exclude_from_sim no)
-		(at 86.614 92.71 0)
+		(at 66.548 92.964 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2481,6 +2493,39 @@
 			(justify left)
 		)
 		(uuid "9115117b-fc46-4d74-943d-2abf92cdea0d")
+	)
+	(text "秋月電子のCH340E USBシリアル変換モジュールを接続することを想定する\nCH340E USBシリアル変換モジュール Type-C: 半導体 秋月電子通商-電子部品・ネット通販\nhttps://akizukidenshi.com/catalog/g/g114745/"
+		(exclude_from_sim no)
+		(at 227.33 61.722 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "de26cffa-e4ad-47df-b40c-4f8f7ec43adf")
+	)
+	(text "1 VID, RTS ->\n2 VOA, RXD <-\n3 VIC, TXD ->\n4 VCC\n5 VOB, CTS <-\n6 GND"
+		(exclude_from_sim no)
+		(at 81.026 92.964 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ee1ae2be-499f-45e8-9c17-a635ce71cbc9")
+	)
+	(text "1 RTS <-\n2 RXD ->\n3 TXD <-\n4 VCC\n5 CTS ->\n6 GND"
+		(exclude_from_sim no)
+		(at 210.82 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f4514af8-635b-45cb-8515-164361020060")
 	)
 	(junction
 		(at 163.83 83.82)
@@ -2624,16 +2669,6 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 91.44) (xy 161.29 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3013e192-ec55-4677-8be3-b2b3c9a1cfdb")
-	)
-	(wire
-		(pts
 			(xy 123.19 83.82) (xy 125.73 83.82)
 		)
 		(stroke
@@ -2664,13 +2699,33 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 96.52) (xy 166.37 86.36)
+			(xy 161.29 87.63) (xy 167.64 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "34ee3552-0eca-4047-b837-4249563d6520")
+		(uuid "344cb21f-1bde-4b51-ab08-cdb22ea08967")
+	)
+	(wire
+		(pts
+			(xy 125.73 93.98) (xy 120.65 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34f42875-b3d2-4768-a641-9e0494210f57")
+	)
+	(wire
+		(pts
+			(xy 120.65 93.98) (xy 120.65 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "354ea2c8-c9a2-4a4c-b156-f5f12bb728b1")
 	)
 	(wire
 		(pts
@@ -2684,23 +2739,13 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 88.9) (xy 125.73 88.9)
+			(xy 111.76 86.36) (xy 102.87 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3b2640c4-b41f-48a5-8c01-95f14858c5a9")
-	)
-	(wire
-		(pts
-			(xy 156.21 91.44) (xy 160.02 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3cdbd22d-a45a-498c-9b30-4309f067bdd9")
+		(uuid "39dc9f5e-f441-4ac3-93ec-cfe2224d345f")
 	)
 	(wire
 		(pts
@@ -2721,16 +2766,6 @@
 			(type default)
 		)
 		(uuid "3d8209c4-7fb6-41d8-852b-a3d3e46cccde")
-	)
-	(wire
-		(pts
-			(xy 115.57 96.52) (xy 115.57 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3dd2b319-2649-441d-8803-8b68909dc816")
 	)
 	(wire
 		(pts
@@ -2764,6 +2799,16 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 86.36) (xy 160.02 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "435a2d1e-c5a4-4acc-8c2f-d138f0605760")
+	)
+	(wire
+		(pts
 			(xy 185.42 99.06) (xy 161.29 99.06)
 		)
 		(stroke
@@ -2784,13 +2829,13 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 91.44) (xy 161.29 93.98)
+			(xy 185.42 86.36) (xy 160.02 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "49e1a332-70cd-453f-94a9-c2987688775d")
+		(uuid "4a0e2a7c-c2c7-45d4-8682-bbf90a39fbf9")
 	)
 	(wire
 		(pts
@@ -2804,16 +2849,6 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 88.9) (xy 185.42 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4b8999ac-2422-4b54-8f51-9c431d3557a7")
-	)
-	(wire
-		(pts
 			(xy 161.29 106.68) (xy 161.29 109.22)
 		)
 		(stroke
@@ -2824,63 +2859,23 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 95.25) (xy 160.02 95.25)
+			(xy 102.87 88.9) (xy 125.73 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5a858cc8-e783-409c-8ac6-f084cefa3548")
+		(uuid "56b2dce5-3063-49f2-a9a9-534e32d41bd4")
 	)
 	(wire
 		(pts
-			(xy 115.57 86.36) (xy 102.87 86.36)
+			(xy 160.02 91.44) (xy 156.21 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5b107f27-7c1e-41a8-9cc9-a5efd73ef45d")
-	)
-	(wire
-		(pts
-			(xy 156.21 93.98) (xy 161.29 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5b2c8a85-8943-4cf0-bcca-655b7c8a78c6")
-	)
-	(wire
-		(pts
-			(xy 114.3 96.52) (xy 102.87 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5cd47b51-a5de-46ef-8b46-0d3852b43df7")
-	)
-	(wire
-		(pts
-			(xy 121.92 95.25) (xy 114.3 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5e57536c-3b2b-4754-9805-852b650440d5")
-	)
-	(wire
-		(pts
-			(xy 160.02 95.25) (xy 160.02 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "65c660e9-96a8-4765-86c8-2e7f26579c3f")
+		(uuid "592a48c1-9c5f-448e-82ee-0db00b8507bc")
 	)
 	(wire
 		(pts
@@ -2894,16 +2889,6 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 93.98) (xy 120.65 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "67440922-4aa9-47e4-992f-fec36276c405")
-	)
-	(wire
-		(pts
 			(xy 156.21 106.68) (xy 161.29 106.68)
 		)
 		(stroke
@@ -2911,6 +2896,16 @@
 			(type default)
 		)
 		(uuid "6d41b9c1-1199-4646-8acc-8da6edfc74b5")
+	)
+	(wire
+		(pts
+			(xy 166.37 91.44) (xy 166.37 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ef9df1d-9962-418a-8b42-5803f6059aba")
 	)
 	(wire
 		(pts
@@ -2944,6 +2939,16 @@
 	)
 	(wire
 		(pts
+			(xy 156.21 96.52) (xy 185.42 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "845e3bfe-3011-4e2b-8cf3-fa35b3e5b1ca")
+	)
+	(wire
+		(pts
 			(xy 118.11 106.68) (xy 118.11 109.22)
 		)
 		(stroke
@@ -2951,16 +2956,6 @@
 			(type default)
 		)
 		(uuid "85b6bac7-5a8c-4f77-ae59-423fe12adf3e")
-	)
-	(wire
-		(pts
-			(xy 114.3 95.25) (xy 114.3 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "86816507-2807-439e-a7a3-bfa754d009d0")
 	)
 	(wire
 		(pts
@@ -2974,6 +2969,16 @@
 	)
 	(wire
 		(pts
+			(xy 185.42 91.44) (xy 166.37 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b18a6fd-067b-4679-a6bd-72fa9c0ec630")
+	)
+	(wire
+		(pts
 			(xy 161.29 99.06) (xy 161.29 106.68)
 		)
 		(stroke
@@ -2981,6 +2986,16 @@
 			(type default)
 		)
 		(uuid "9984636f-94a0-465e-8adc-63e38ec4828c")
+	)
+	(wire
+		(pts
+			(xy 125.73 91.44) (xy 121.92 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c5e1edc-4394-4aac-aed5-810725619fd7")
 	)
 	(wire
 		(pts
@@ -2994,33 +3009,23 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 93.98) (xy 120.65 93.98)
+			(xy 109.22 95.25) (xy 109.22 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9fe11429-01ca-44d5-ac28-d9853c93fb3d")
+		(uuid "b194a53f-f429-4171-a958-68412737e2de")
 	)
 	(wire
 		(pts
-			(xy 156.21 96.52) (xy 166.37 96.52)
+			(xy 161.29 93.98) (xy 161.29 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a373f891-c045-4229-bd50-bee66bd5133e")
-	)
-	(wire
-		(pts
-			(xy 125.73 96.52) (xy 115.57 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "af87ab6a-74fc-4557-afba-e61fe71c94d1")
+		(uuid "b2855fbd-9343-4e0e-ab8f-c17aebc2a5b9")
 	)
 	(wire
 		(pts
@@ -3044,23 +3049,53 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 96.52) (xy 167.64 96.52)
+			(xy 120.65 91.44) (xy 102.87 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c1dc336a-3229-4e74-be32-b0ae62e0c79c")
+		(uuid "bd1bc077-4684-4933-a57a-1f192699db00")
 	)
 	(wire
 		(pts
-			(xy 167.64 96.52) (xy 167.64 95.25)
+			(xy 167.64 88.9) (xy 185.42 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cbe87ef7-1958-4973-bc4c-a44fa622bd1a")
+		(uuid "bf5168fc-2fa5-402c-8545-5a9151fb3055")
+	)
+	(wire
+		(pts
+			(xy 125.73 96.52) (xy 111.76 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfaaad32-6859-4560-a443-6f06f6c2c0d8")
+	)
+	(wire
+		(pts
+			(xy 109.22 96.52) (xy 102.87 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1f98d7b-73fa-4752-bdcf-0cb21cb3292e")
+	)
+	(wire
+		(pts
+			(xy 121.92 91.44) (xy 121.92 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0d5ab43-a0c8-4027-a536-d5d6d193f370")
 	)
 	(wire
 		(pts
@@ -3074,23 +3109,13 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 91.44) (xy 121.92 91.44)
+			(xy 156.21 88.9) (xy 166.37 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d52252ba-a728-4ea3-874b-167683ccb3fa")
-	)
-	(wire
-		(pts
-			(xy 121.92 91.44) (xy 121.92 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d623e5e1-2703-462d-b91f-6a2bc838400a")
+		(uuid "d39338e1-b673-42d2-9d8b-d7c930eb387d")
 	)
 	(wire
 		(pts
@@ -3104,23 +3129,43 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 91.44) (xy 102.87 91.44)
+			(xy 111.76 96.52) (xy 111.76 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e470f43e-e301-481d-994b-208c6abeb1b5")
+		(uuid "db2f0f2a-a3aa-44d3-8e82-40005725604e")
 	)
 	(wire
 		(pts
-			(xy 166.37 86.36) (xy 185.42 86.36)
+			(xy 167.64 87.63) (xy 167.64 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f13e9f4c-4142-4205-9d61-965b0f560e30")
+		(uuid "e59df6a2-16ee-4333-a5cd-216af980c231")
+	)
+	(wire
+		(pts
+			(xy 156.21 93.98) (xy 161.29 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee7035e9-30d1-487d-87ee-808a71584ef3")
+	)
+	(wire
+		(pts
+			(xy 121.92 95.25) (xy 109.22 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "feae3f64-8cc7-4bc4-84c0-ba8473b26ff4")
 	)
 	(symbol
 		(lib_id "Device:C")
