@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "9.0.5"
     },
-    "CreationDate": "2026-03-26T21:16:33+09:00"
+    "CreationDate": "2026-03-26T21:29:07+09:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "usb_typec_serial_insulation_adum1412",
       "GUID": "7573625f-7479-4706-9563-5f7365726961",
-      "Revision": "V3.0"
+      "Revision": "V3.1"
     },
     "Size": {
       "X": 27.05,
