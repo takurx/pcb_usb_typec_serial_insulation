@@ -9,11 +9,12 @@
 	(paper "A4")
 	(title_block
 		(title "usb typec serial insulation")
-		(date "2026-03-26")
-		(rev "V3.1")
+		(date "2026-04-30")
+		(rev "V3.2")
 		(company "takurx")
 		(comment 1 "ADuM1412")
 		(comment 2 "modify pinout 1,2,3,5")
+		(comment 3 "add pinout description, B.Silk")
 	)
 	(layers
 		(0 "F.Cu" signal)
@@ -1719,14 +1720,158 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "usb typec serial inslation\nADuM1412\nV3.1 260326 takurx"
-		(at 150.3 89.6 90)
+	(gr_text "->\nRTS\nVIB"
+		(at 150.205 92 0)
+		(layer "B.SilkS")
+		(uuid "0cd46155-d078-4490-87e6-17551f17389a")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.075)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "usb typec serial inslation\nADuM1412\nV3.2 260430 takurx"
+		(at 143.1 89.6 90)
 		(layer "B.SilkS")
 		(uuid "6d2a04af-5f2b-410f-ac7a-0576412efdc2")
 		(effects
 			(font
 				(size 0.8 0.8)
 				(thickness 0.1)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "->\nRX2\nVOA"
+		(at 134.3 95 0)
+		(layer "B.SilkS")
+		(uuid "832d8354-ddb4-4101-ac21-d4b6a2e5f298")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.075)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "GND2"
+		(at 134.9 104.1 -0)
+		(layer "B.SilkS")
+		(uuid "913c9ad5-b314-49a7-8ec9-23b5fcd5bc80")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.075)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "->\nTX1\nVIA"
+		(at 150.205 97.7 0)
+		(layer "B.SilkS")
+		(uuid "b27c009c-e61f-4e43-a51a-d676189c5f6a")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.075)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "->\nCTS\nVOB"
+		(at 134.3 102.2 0)
+		(layer "B.SilkS")
+		(uuid "bbcf11c1-1152-4168-828f-4c555edfa14f")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.075)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "<-\nTX2\nVIC"
+		(at 134.3 98 0)
+		(layer "B.SilkS")
+		(uuid "c22100ab-77e5-4ccb-bc4c-d26352577769")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.075)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "<-\nCTS\nVOD"
+		(at 150.305 102.3 0)
+		(layer "B.SilkS")
+		(uuid "cf1d9903-f726-487d-bf71-d874c7ca2a7d")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.075)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "VCC1"
+		(at 150.3 99.1 -0)
+		(layer "B.SilkS")
+		(uuid "d1379076-8bed-46c6-af06-f40b75b80a97")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.075)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "GND1"
+		(at 150.4 104.2 -0)
+		(layer "B.SilkS")
+		(uuid "f0fe014d-cbea-4a2e-a5c5-390b423ea815")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.075)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "<-\nRTS\nVID"
+		(at 134.3 92.3 0)
+		(layer "B.SilkS")
+		(uuid "f247a044-34d8-4976-acb1-b89d25f2df7e")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.075)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "VCC2"
+		(at 134.8 99.3 -0)
+		(layer "B.SilkS")
+		(uuid "f3a2814b-a781-4e2d-84e7-d6f8a7a5df20")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.075)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "<-\nRX1\nVOC"
+		(at 150.305 94.9 0)
+		(layer "B.SilkS")
+		(uuid "fc3cfbf1-13d7-4b98-a67e-e1e68ece6eec")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.075)
 			)
 			(justify left bottom mirror)
 		)
