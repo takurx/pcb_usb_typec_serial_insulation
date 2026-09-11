@@ -1732,8 +1732,8 @@
 			(justify left bottom mirror)
 		)
 	)
-	(gr_text "usb typec serial inslation\nADuM1412\nV3.2 260430 takurx"
-		(at 143.1 89.6 90)
+	(gr_text "ZEBRA ADuM1412\nUSB SERIAL ISOLATOR\nREV 3.3 260911\nTSUKUSEI WORKS"
+		(at 144 90 90)
 		(layer "B.SilkS")
 		(uuid "6d2a04af-5f2b-410f-ac7a-0576412efdc2")
 		(effects
